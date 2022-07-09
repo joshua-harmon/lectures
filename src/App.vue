@@ -1,0 +1,65 @@
+<template lang="html">
+  <div id="app">
+    <header>
+      <nav>
+        <RouterLink to="/">Home</RouterLink> |
+        <RouterLink to="/math1">Math1</RouterLink> |
+        <RouterLink to="/math2">Math2</RouterLink> |
+        <RouterLink to="/math3">Math3</RouterLink> |
+        <RouterLink to="/algebra">Algebra</RouterLink> |
+        <RouterLink to="/trig">Trig</RouterLink> |
+        <RouterLink to="/preCalc">PreCalc</RouterLink> |
+        <RouterLink to="/calculus">Calculus</RouterLink> |
+        <RouterLink to="/chemistry">Chemistry</RouterLink> |
+        <RouterLink to="/coding">Coding</RouterLink> |
+        <RouterLink to="/engineering">Engineering</RouterLink> |
+        <RouterLink to="/contact">Contact</RouterLink>
+      </nav>
+    </header>
+
+    <main id="content">
+      <RouterView :key="$route.path"/>
+    </main>
+
+    <footer>
+      <p>Page footer</p>
+    </footer>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "app",
+};
+</script>
+
+<style scoped>
+body {
+  background-color: #fafafa;
+  color: #1a1b1c;
+}
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 60px;
+}
+a {
+  color: #666666;
+  font-weight: bold;
+}
+header,
+footer {
+  text-align: center;
+}
+section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+section h1 {
+}
+section p {
+  text-align: left;
+  justify-content: left;
+}
+</style>
